@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8" />
+  <title>canvas</title>
+</head>
+<body>
+  <canvas id="mon_canvas" width="500" height="400">
+  </canvas>
+  <script>
+  var c = document.getElementById("mon_canvas");
+  var ctx = c.getContext("2d");
+  // Cadre
+  ctx.beginPath();
+  ctx.moveTo(0,0);
+  ctx.lineTo(0,400);
+  ctx.lineTo(500,400)
+  ctx.lineTo(500,0)
+  ctx.closePath();
+  ctx.lineWidth = "2";
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // E
+  ctx.beginPath();
+  ctx.moveTo(25,100);
+  ctx.lineTo(25,300);
+  ctx.closePath();
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // E
+  ctx.beginPath();
+  ctx.moveTo(25,300);
+  ctx.lineTo(75,300);
+  ctx.closePath();
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // E
+  ctx.beginPath();
+  ctx.moveTo(25,200);
+  ctx.lineTo(75,200);
+  ctx.closePath();
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // E
+  ctx.beginPath();
+  ctx.moveTo(25,100);
+  ctx.lineTo(75,100);
+  ctx.closePath();
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // 2
+  ctx.beginPath();
+  ctx.moveTo(75,100);
+  ctx.bezierCurveTo(310,-100,175,200,60,320);
+  ctx.strokeStyle = "orange";
+  ctx.lineWidth = "10";
+  ctx.stroke();
+  // 2
+  ctx.beginPath();
+  ctx.moveTo(60,320);
+  ctx.bezierCurveTo(100,305,175,305,175,300);
+  ctx.strokeStyle = "orange";
+  ctx.lineWidth = "10";
+  ctx.stroke();
+  // N
+  ctx.beginPath();
+  ctx.moveTo(200,300);
+  ctx.lineTo(200,100);
+  ctx.closePath();
+  ctx.lineWidth = "2";
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // N
+  ctx.beginPath();
+  ctx.moveTo(200,100);
+  ctx.lineTo(300,300);
+  ctx.closePath();
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // N
+  ctx.beginPath();
+  ctx.moveTo(300,300);
+  ctx.lineTo(300,100);
+  ctx.closePath();
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+  // petit truc nul
+  ctx.beginPath();
+  ctx.moveTo(350,100);
+  ctx.lineTo(357,107);
+  ctx.lineTo(357,114);
+  ctx.lineTo(350,121);
+  ctx.lineTo(343,114);
+  ctx.lineTo(343,107);
+  ctx.closePath();
+  ctx.fillStyle = "#EBEBEB";
+  ctx.fill();
+  // petit truc nul 2
+  ctx.beginPath();
+  ctx.moveTo(343,121);
+  ctx.lineTo(350,128);
+  ctx.lineTo(350,135);
+  ctx.lineTo(343,142);
+  ctx.lineTo(336,135);
+  ctx.lineTo(336,128);
+  ctx.closePath();
+  ctx.fillStyle = "#DBDADB";
+  ctx.fill();
+  // petit truc nul 3
+  ctx.beginPath();
+  ctx.moveTo(360,121);
+  ctx.lineTo(367,128);
+  ctx.lineTo(367,135);
+  ctx.lineTo(360,142);
+  ctx.lineTo(353,135);
+  ctx.lineTo(353,128);
+  ctx.closePath();
+  ctx.fillStyle = "#595656";
+  ctx.fill();
+  // petit truc nul 4
+  ctx.beginPath();
+  ctx.moveTo(350,142);
+  ctx.lineTo(357,149);
+  ctx.lineTo(357,156);
+  ctx.lineTo(350,163);
+  ctx.lineTo(343,156);
+  ctx.lineTo(343,149);
+  ctx.closePath();
+  ctx.fillStyle = "#EA4E1A";
+  ctx.fill();
+  // petit truc nul 5
+  ctx.beginPath();
+  ctx.moveTo(343,163);
+  ctx.lineTo(350,170);
+  ctx.lineTo(350,177);
+  ctx.lineTo(343,184);
+  ctx.lineTo(336,177);
+  ctx.lineTo(336,170);
+  ctx.closePath();
+  ctx.fillStyle = "#878787";
+  ctx.fill();
+  // petit truc nul 6
+  ctx.beginPath();
+  ctx.moveTo(360,163);
+  ctx.lineTo(367,170);
+  ctx.lineTo(367,177);
+  ctx.lineTo(360,184);
+  ctx.lineTo(353,177);
+  ctx.lineTo(353,170);
+  ctx.closePath();
+  ctx.fillStyle = "#ECECEC";
+  ctx.fill();
+  // mini petit truc nul
+  ctx.beginPath();
+  ctx.moveTo(370,135);
+  ctx.lineTo(370,132);
+  ctx.lineTo(373,129);
+  ctx.lineTo(376,132);
+  ctx.lineTo(376,135);
+  ctx.lineTo(373,138);
+  ctx.closePath();
+  ctx.fillStyle = "#ECECEC";
+  ctx.fill();
+  // mini petit truc nul 2
+  ctx.beginPath();
+  ctx.moveTo(380,135);
+  ctx.lineTo(380,132);
+  ctx.lineTo(383,129);
+  ctx.lineTo(386,132);
+  ctx.lineTo(386,135);
+  ctx.lineTo(383,138);
+  ctx.closePath();
+  ctx.fillStyle = "#EA4E1A";
+  ctx.fill();
+  // mini petit truc nul 3
+  ctx.beginPath();
+  ctx.moveTo(376,138);
+  ctx.lineTo(379,141);
+  ctx.lineTo(379,144);
+  ctx.lineTo(376,147);
+  ctx.lineTo(373,144);
+  ctx.lineTo(373,141);
+  ctx.closePath();
+  ctx.fillStyle = "#878787";
+  ctx.fill();
+  // texte
+  var text = 'École du Numérique';
+  ctx.font = "20pt Verdana";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "top";
+  ctx.fillStyle = "#878787";
+  ctx.fillText(text,200,320);
+  // texte2
+  var text = 'du Noyonnais';
+  ctx.font = "20pt Verdana";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "top";
+  ctx.fillStyle = "#878787";
+  ctx.fillText(text,190,350);
+
+</script>
+</body>
+</html>

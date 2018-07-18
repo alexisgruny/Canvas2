@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8" />
+  <title>canvas</title>
+</head>
+<body>
+  <canvas id="mon_canvas" width="350" height="350">
+  </canvas>
+  <script>
+  var c = document.getElementById("mon_canvas");
+  var ctx = c.getContext("2d");
+  // tete
+  ctx.beginPath();
+ctx.arc(175,25,25,0,Math.PI*2,true);
+ctx.fillStyle = "brown";
+ctx.fill();
+  // corps
+  ctx.beginPath();
+  ctx.moveTo(150,50);
+  ctx.lineTo(150,125);
+  ctx.lineTo(200,125);
+  ctx.lineTo(200,50);
+  ctx.fillStyle = "brown";
+  ctx.fill();
+  // bras
+  ctx.beginPath();
+ctx.moveTo(125,50);
+ctx.lineTo(225,50)
+ctx.lineWidth = 20;
+ctx.lineCap = "round";
+ctx.strokeStyle = "brown";
+ctx.stroke();
+// pieds
+ctx.beginPath();
+ctx.moveTo(160,125);
+ctx.lineTo(160,150);
+ctx.lineWidth = 20;
+ctx.lineCap = "round";
+ctx.strokeStyle = "brown";
+ctx.stroke();
+// pieds2
+ctx.beginPath();
+ctx.moveTo(190,125);
+ctx.lineTo(190,150);
+ctx.lineWidth = 20;
+ctx.lineCap = "round";
+ctx.strokeStyle = "brown";
+ctx.stroke();
+//sourcil1
+ctx.beginPath();
+ctx.moveTo(160,10);
+ctx.quadraticCurveTo(165,5,170,10);
+ctx.lineWidth="1";
+ctx.strokeStyle = "white";
+ctx.stroke();
+//sourcill2
+ctx.beginPath();
+ctx.moveTo(180,10);
+ctx.quadraticCurveTo(185,5,190,10);
+ctx.lineWidth="1";
+ctx.strokeStyle = "white";
+ctx.stroke();
+//oeil1
+ctx.beginPath();
+ctx.arc(165,20,5,0,Math.PI*2,true);
+ctx.fillStyle = "white";
+ctx.fill();
+//oiel2
+ctx.beginPath();
+ctx.arc(185,20,5,0,Math.PI*2,true);
+ctx.fillStyle = "white";
+ctx.fill();
+//bouche haut
+ctx.beginPath();
+ctx.moveTo(160,30);
+ctx.quadraticCurveTo(175,40,190,30);
+ctx.lineWidth="1";
+ctx.strokeStyle = "red";
+ctx.stroke();
+//bouche bas
+ctx.beginPath();
+ctx.moveTo(160,30);
+ctx.quadraticCurveTo(175,45,190,30);
+ctx.lineWidth="1";
+ctx.strokeStyle = "red";
+ctx.stroke();
+//bouton1
+ctx.beginPath();
+ctx.arc(175,70,5,0,Math.PI*2,true);
+ctx.fillStyle = "purple";
+ctx.fill();
+//bouton2
+ctx.beginPath();
+ctx.arc(175,85,5,0,Math.PI*2,true);
+ctx.fillStyle = "purple";
+ctx.fill();
+
+</script>
+</body>
+</html>

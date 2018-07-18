@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8" />
+  <title>canvas</title>
+</head>
+<body>
+  <canvas id="mon_canvas" width="350" height="350">
+  </canvas>
+  <script>
+  var c = document.getElementById("mon_canvas");
+  var ctx = c.getContext("2d");
+  // cone
+  ctx.beginPath();
+  ctx.moveTo(175,350);
+  ctx.lineTo(275,175);
+  ctx.lineTo(75,175);
+  ctx.closePath();
+  ctx.fillStyle = "brown";
+  ctx.fill();
+  // glace
+  ctx.beginPath();
+ctx.moveTo(275,175);
+ctx.bezierCurveTo(175,87,175,87,75,175);
+ctx.fillStyle = "red";
+ctx.fill();
+</script>
+</body>
+</html>
